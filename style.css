@@ -285,3 +285,41 @@ footer {
   text-decoration: none;
   color: #1e273e;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-content {
+    max-width: 80vw;
+  }
+  .hero-image {
+    display: none;
+  }
+  .about-content {
+    width: 90vw;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill-center {
+    position: relative;
+    left: 190px;
+  }
+  .works h2 {
+    text-align: center;
+  }
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .work-center {
+    position: relative;
+    left: 190px;
+  }
+  .about img {
+    width: 200px;
+  }
+}
