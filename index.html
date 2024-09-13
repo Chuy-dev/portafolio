@@ -21,8 +21,14 @@
     <div class="container">
       <header id="top">
         <div class="logo">Jesus.</div>
-        <nav>
-          <ul>
+        <button id="open" class="open-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+          <button class="close-menu" id="close">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <ul class="nav-list">
             <li><a href="#about">Sobre Mi</a></li>
             <li><a href="#skills">Habilidades</a></li>
             <li><a href="#works">Proyectos</a></li>
@@ -78,6 +84,9 @@
               Me encanta transformar diseños en interfaces de usuario atractivas
               y fáciles de usar.
             </p>
+          </div>
+          <div class="about-image__bottom">
+            <img src="./img/sobre-mi_bottom.png" alt="Imagen Sobre Mi" />
           </div>
         </div>
       </section>
@@ -223,5 +232,6 @@
     <div class="boton-flotante" id="scroll-up">
       <a href="#top"><i class="fa-solid fa-arrow-up fa-lg"></i></a>
     </div>
+    <script src="./menu.js"></script>
   </body>
 </html>

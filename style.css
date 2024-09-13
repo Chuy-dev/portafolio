@@ -51,6 +51,10 @@ nav ul li a:hover {
   text-decoration: underline;
   font-weight: bold;
 }
+.open-menu,
+.close-menu {
+  display: none;
+}
 .hero {
   display: flex;
   justify-content: space-between;
@@ -165,6 +169,9 @@ nav ul li a:hover {
     font-weight: 400;
     font-size: 40px;
   }
+}
+.about-image__bottom {
+  display: none;
 }
 .skills {
   margin-top: 70px;
@@ -287,6 +294,52 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .open-menu,
+  .close-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .open-menu {
+    color: #fff;
+  }
+
+  .close-menu {
+    color: #ececec;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1e273e;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax #3b4f5f80;
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-list li a {
+    color: #ecececec;
+  }
   .hero {
     flex-direction: column;
   }
@@ -321,5 +374,63 @@ footer {
   }
   .about img {
     width: 200px;
+  }
+}
+@media (max-width: 425px) {
+  .hero {
+    margin-bottom: 0;
+  }
+  .hero-content {
+    h1 {
+      font-size: 42px;
+    }
+    h2 {
+      font-size: 34px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .title-typing {
+    width: 310px;
+  }
+  .caption-typing {
+    width: 325px;
+  }
+  .about-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-image {
+    display: none;
+  }
+  .about-text {
+    max-width: 90%;
+    h2 {
+      margin-top: 0;
+    }
+  }
+  .about-image__bottom {
+    margin-top: 50px;
+    display: block;
+    img {
+      width: 300px;
+    }
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skill-center {
+    left: 0px;
+  }
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-center {
+    left: 0px;
+  }
+  .contact form {
+    width: 500px;
   }
 }
